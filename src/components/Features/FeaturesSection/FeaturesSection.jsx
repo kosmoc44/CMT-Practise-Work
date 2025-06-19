@@ -1,4 +1,4 @@
-import s from './FeaturesSection.module.scss';
+import s from './featuresSection.module.scss';
 import { features } from "../../../data/features.jsx";
 import { useScrollAnimation } from "../../../hooks/useScrollAnimation";
 
