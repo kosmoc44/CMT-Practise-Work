@@ -1,0 +1,135 @@
+{
+  "ABOUT_US": "ABOUT US",
+  "HOW_WE_WORK": "HOW WE WORK",
+  "CERTIFICATES": "CERTIFICATES",
+  "REVIEWS": "REVIEWS",
+  "CONTACT": "CONTACTS",
+  "CONSULTING_AGENCY": "CONSULTING AGENCY",
+  "BOOST EFFICIENCY AND STREAMLINE YOUR BUSINESS": "BOOST EFFICIENCY AND STREAMLINE YOUR BUSINESS",
+  "RECRUITING WITH CRM SYSTEM": "RECRUITING WITH CRM SYSTEM",
+  "Contact us": "Contact us",
+  "SMRT Agency provides": "SMRT Agency provides",
+  "solutions for trucking companies. Our team will help set up your": "solutions for trucking companies. Our team will help set up your",
+  "recruiting": "recruiting",
+  "safety departments": "safety departments",
+  "with automation. We connect CRM system with email and RingCentral so": "with automation. We connect CRM system with email and RingCentral so",
+  "you can track every lead and see each step of the hiring process.": "you can track every lead and see each step of the hiring process.",
+  "This makes it easier to": "This makes it easier to",
+  "manage your work": "manage your work",
+  "respond faster": "respond faster",
+  "grow your team": "grow your team",
+  "and": "and",
+  "stats": {
+    "years": {
+      "value": "5",
+      "unit": "Years",
+      "line1": "experienced",
+      "line2": "employees",
+      "line3": "for your",
+      "line4": "success"
+    },
+    "drivers": {
+      "value": "50.000",
+      "unit": "drivers",
+      "line1": "Daily driver",
+      "line2": "turnover across",
+      "line3": "all funnels",
+      "line4": "of our clients"
+    },
+    "employees": {
+      "value": "45",
+      "unit": "employees",
+      "line1": "in agency",
+      "line2": "ready to work",
+      "line3": "on your",
+      "line4": "project"
+    },
+    "days": {
+      "value": "7",
+      "unit": "days",
+      "line1": "fastest setup",
+      "line2": "process to",
+      "line3": "start your",
+      "line4": "business"
+    }
+  },
+  "CONNECT_ADS": "Connect Paid Ads to Your CRM",
+  "LEADS": "Leads from Meta",
+  "STRAIGHT": "go straight into your",
+  "NO_MORE": "No more manual entry or missed contacts.",
+  "ANALYTICS_BENEFITS": "See which ads bring the best results, track each lead's journey, and understand what works. Clear reports help you spend smarter and hire faster.",
+  "FEATURE_SECTION": "Feature",
+  "TASK_MANAGEMENT": "Task Management",
+  "WITH": "With the",
+  "MANAGERS_VIEW": "managers can see all tasks assigned to each recruiter — nothing gets lost or forgotten.",
+  "RECRUITERS_VIEW": "Recruiters also see their own tasks in one place, so they always know what to do next.",
+  "SET": "You can set",
+  "REMINDER": "reminders, due dates,",
+  "TRACK": "track progress",
+  "SETTINGS_BENEFITS": "step by step. It's simple, clear, and saves time every day.",
+  "CALL": "Want to leave a call request",
+  "SOLVE": "to solve your problems?",
+  "CRM_BENEFITS_TITLE": "WHAT YOU WILL GET FROM CRM SYSTEM",
+  "features": [
+    {
+      "title": "DATABASE",
+      "items": [
+        "Unified database",
+        "Quick search",
+        "Interaction history",
+        "Rejected drivers archive",
+        "Lead sources"
+      ]
+    },
+    {
+      "title": "CALENDAR",
+      "items": [
+        "Google Calendar sync",
+        "Task prioritization",
+        "Follow-up tasks",
+        "Event calendar",
+        "Reminders"
+      ]
+    },
+    {
+      "title": "ANALYTICS",
+      "items": [
+        "Sales funnel",
+        "Source performance",
+        "Conversion rate",
+        "Average hire time",
+        "Recruiter ranking"
+      ]
+    },
+    {
+      "title": "VISIBILITY",
+      "items": [
+        "Process stages",
+        "Responsible persons",
+        "Rejection reasons",
+        "Activity log",
+        "Step clarity"
+      ]
+    },
+    {
+      "title": "INTEGRATION",
+      "items": [
+        "Shared CRM access",
+        "Standardized workflow",
+        "Data handoff",
+        "Role-based permissions",
+        "Action notifications"
+      ]
+    },
+    {
+      "title": "AUTOMATION",
+      "items": [
+        "Phone system integration",
+        "Message templates",
+        "Auto follow-ups",
+        "Call recordings",
+        "Automated emails"
+      ]
+    }
+  ]
+}

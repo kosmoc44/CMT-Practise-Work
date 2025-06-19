@@ -1,0 +1,253 @@
+@use '../../App.scss';
+
+.slider {
+    margin: 2.5rem 0;
+    width: 100%;
+    overflow: hidden;
+
+    &_wrapper {
+        display: grid;
+        grid-template-columns: 30% 70%;
+        gap: 2.5rem;
+        align-items: center;
+
+        @media (max-width: 1024px) {
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+    }
+
+    &_block {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-image: url('../../assets/img/testimonials-author-bg.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        padding: 2rem;
+        border-radius: 0.625rem;
+        min-height: 300px;
+        position: relative;
+        z-index: 1;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 0.625rem;
+            z-index: -1;
+        }
+
+        @media (max-width: 768px) {
+            padding: 1.5rem;
+            min-height: 250px;
+        }
+    }
+
+    &_cardImg {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-bottom: 1rem;
+
+        img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid white;
+
+            @media (max-width: 768px) {
+                width: 80px;
+                height: 80px;
+            }
+        }
+    }
+
+    &_title {
+        color: #fff;
+        font-size: 1.2rem;
+        margin-top: 0.5rem;
+        font-weight: 600;
+        text-align: center;
+
+        @media (max-width: 768px) {
+            font-size: 1rem;
+        }
+    }
+
+    &_subtitle {
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 1rem;
+        text-align: center;
+
+        @media (max-width: 768px) {
+            font-size: 0.9rem;
+        }
+    }
+
+    &_dotsContainer {
+        margin-top: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    &_dots {
+        width: 0.8rem;
+        height: 0.8rem;
+        border-radius: 50%;
+        border: 2px solid #fff;
+        background: transparent;
+        cursor: pointer;
+        flex-shrink: 0;
+        transition: all 0.3s ease;
+
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+
+    &_card {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        position: relative;
+        border: 2px solid #4856db;
+        padding: 1.5rem;
+        border-radius: 0.625rem;
+        min-height: 300px;
+        background: white;
+
+        @media (max-width: 1024px) {
+            padding: 1.5rem 3rem;
+        }
+
+        @media (max-width: 768px) {
+            padding: 1.5rem 2rem;
+            min-height: 250px;
+        }
+
+        @media (max-width: 480px) {
+            padding: 1.5rem 1rem;
+        }
+
+        &_title {
+            font-size: clamp(1.1rem, 2.9vw, 2.1rem);
+            font-weight: 700;
+            color: #4856db;
+            text-align: center;
+            margin-bottom: 1.25rem;
+            text-transform: uppercase;
+            line-height: 1.3;
+        }
+
+        &_text {
+            background: rgba(72, 86, 219, 0.1);
+            border-radius: 0.9375rem;
+            width: 100%;
+            padding: 1.5rem;
+
+            @media (max-width: 768px) {
+                padding: 1rem;
+            }
+        }
+
+        &_review {
+            font-size: clamp(1rem, 1.5vw, 1.2rem);
+            text-wrap: pretty;
+            text-align: center;
+            font-weight: 500;
+            color: #282828;
+            font-style: italic;
+            line-height: 1.6;
+            position: relative;
+            padding: 0 1rem;
+
+            @media (max-width: 350px) {
+                font-size: 0.7rem;
+            }
+
+            &::before {
+                content: '"';
+                position: absolute;
+                top: -1rem;
+                left: -0.3125rem;
+                font-size: 2.5rem;
+                color: #4856db;
+                opacity: 0.3;
+            }
+
+            &::after {
+                content: '"';
+                position: absolute;
+                bottom: -1.5rem;
+                right: -0.3125rem;
+                font-size: 2.5rem;
+                color: #4856db;
+                opacity: 0.3;
+            }
+        }
+    }
+
+    &_arrowLeft,
+    &_arrowRight {
+        position: absolute;
+        top: 60%;
+        transform: translateY(-50%);
+        border-radius: 50%;
+        background: #4856db;
+        color: #fff;
+        width: 2.5rem;
+        height: 2.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        border: none;
+        outline: none;
+        z-index: 2;
+
+        @media (max-width: 768px) {
+            width: 2rem;
+            height: 2rem;
+        }
+
+        @media (max-width: 350px) {
+            top: -20%;
+        }
+    }
+
+    &_arrowLeft {
+        left: 1rem;
+        right: auto;
+
+        @media (max-width: 1024px) {
+            left: 0.5rem;
+        }
+    }
+
+    &_arrowRight {
+        right: 1rem;
+        left: auto;
+
+        @media (max-width: 1024px) {
+            right: 0.5rem;
+        }
+    }
+
+    .slider_dots_active {
+        background: #fff !important;
+        transform: scale(1.2);
+    }
+}

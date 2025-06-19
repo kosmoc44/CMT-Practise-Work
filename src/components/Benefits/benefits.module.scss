@@ -1,0 +1,188 @@
+@use '../../App.scss';
+@use '../../styles/animations.scss';
+
+.benefits {
+    margin: 20px 0 20px 0;
+
+    &_title {
+        text-align: center;
+        font-size: clamp(1.9rem, 2.9vw, 2.4rem);
+        font-weight: 800;
+        margin-bottom: 60px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        position: relative;
+        padding-bottom: 20px;
+        background: linear-gradient(90deg,
+                #4856db 0%,
+                #4856db 25.48%,
+                #4856db 68.75%,
+                #0a77bb 93.75%,
+                #099af4 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+        transform: translateY(20px);
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 4px;
+            background: #4856db;
+            border-radius: 2px;
+            opacity: 0;
+            transition: width 1s ease, opacity 0.3s ease;
+        }
+
+        &.visible::after {
+            width: clamp(70px, 100%, 290px);
+            opacity: 1;
+        }
+    }
+
+    &_wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+            gap: 30px;
+        }
+    }
+
+    &_grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &_card {
+        border: 2px solid #000;
+        padding: 25px 30px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: start;
+        position: relative;
+        background: white;
+        opacity: 0;
+        transform: translateY(20px);
+        transition:
+            opacity 0.6s ease,
+            transform 0.6s ease,
+            box-shadow 0.3s ease;
+        z-index: 1;
+
+        @for $i from 1 through 4 {
+            &:nth-child(#{$i}) {
+                transition-delay: #{$i * 0.2}s;
+            }
+        }
+
+        &.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        &:hover {
+            background: linear-gradient(45deg, #4856db, #0a77bb);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+
+            .benefits_card_title,
+            .benefits_card_text {
+                color: white !important;
+            }
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, #4856db, #0a77bb);
+            z-index: -1;
+            border-radius: 10px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        &:hover::before {
+            opacity: 1;
+        }
+
+        &_title {
+            color: #000000cf;
+            font-weight: 700;
+            font-size: 1.5rem;
+            margin-top: 15px;
+        }
+
+        &_text {
+            color: #000000cf;
+            font-weight: 500;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+    }
+
+    &_card:nth-child(2),
+    &_card:nth-child(3) {
+        border-color: #b90000;
+    }
+
+    &_number {
+        position: absolute;
+        top: -14px;
+        left: -14px;
+        background-color: #3a47c5;
+        border-radius: 50%;
+        height: 28px;
+        width: 28px;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 1.1rem;
+        transition: transform 0.3s ease;
+
+        &_line {
+            background: #000;
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            z-index: -1;
+            border-radius: 50%;
+            width: 28px;
+            height: 28px;
+        }
+    }
+
+    &_img {
+        max-width: 100%;
+        height: auto;
+        opacity: 0;
+
+        @media (max-width: 768px) {
+            display: none;
+        }
+    }
+
+    .slide_right {
+        animation: slideInFromRight 0.8s ease-out 0.3s forwards;
+    }
+}

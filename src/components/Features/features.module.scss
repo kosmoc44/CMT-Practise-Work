@@ -1,0 +1,120 @@
+@use '../../App.scss';
+@use '../../styles/animations.scss';
+
+.features {
+    margin-top: 50px;
+
+    &_wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 60px;
+    }
+
+    &_content {
+        display: grid;
+        align-items: center;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+        padding: 0 20px;
+
+        @media (max-width: 992px) {
+            gap: 30px;
+        }
+
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr;
+            padding: 0 10px;
+
+            .features_text {
+                order: 1;
+            }
+
+            .features_img {
+                order: 2;
+            }
+        }
+
+
+    }
+
+    &_text {
+        display: flex;
+        flex-direction: column;
+
+        @media (max-width: 768px) {
+            align-items: center;
+            text-align: start;
+        }
+    }
+
+    &_title {
+        font-weight: 700;
+        color: #2b83d5;
+        font-size: 2rem;
+        margin-bottom: 30px;
+
+        @media (max-width: 768px) {
+            font-size: 1.5rem;
+        }
+    }
+
+    &_title_2 {
+        font-weight: 700;
+        color: #4856db;
+        font-size: 2rem;
+        margin-bottom: 30px;
+
+        @media (max-width: 768px) {
+            font-size: 1.5rem;
+        }
+    }
+
+    &_description {
+        font-size: 1.8rem;
+        font-weight: 300;
+        color: #3f3f3f;
+        line-height: 2rem;
+        text-wrap: balance;
+        margin-bottom: 20px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        @media (max-width: 768px) {
+            font-size: 1.4rem;
+        }
+    }
+
+    &_text_blue_1 {
+        color: #2b83d5;
+        font-weight: 400;
+    }
+
+    &_text_blue_2 {
+        color: #4856db;
+        font-weight: 400;
+    }
+
+    .slide_right {
+        animation: slideInFromRight 0.8s ease-out 0.1s forwards;
+    }
+
+    .slide_left {
+        animation: slideInFromLeft 0.8s ease-out 0.4s forwards;
+    }
+
+    &_img {
+        transform: translateX(100%);
+        opacity: 0;
+
+        @media (max-width: 768px) {
+            width: 271px;
+            height: 375px;
+            margin: 0 auto;
+        }
+    }
+
+}

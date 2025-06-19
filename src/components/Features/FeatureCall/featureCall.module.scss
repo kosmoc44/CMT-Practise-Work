@@ -1,0 +1,134 @@
+@use '../../../App.scss';
+
+.call {
+    margin-top: 50px;
+    margin-bottom: 100px;
+
+    &_box {
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 32px;
+        padding: 40px 20px;
+        background-color: #4856db;
+        border-radius: 20px;
+
+        span {
+            position: absolute;
+            width: 100px;
+            height: 280px;
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            transform: rotate(10deg);
+            z-index: 0;
+
+            @media (max-width: 768px) {
+                width: 60px;
+                height: 180px;
+                opacity: 0.3;
+            }
+        }
+
+        span:nth-child(1) {
+            top: -30px;
+            left: -20px;
+
+            @media (max-width: 768px) {
+                top: -10px;
+                left: -10px;
+            }
+        }
+
+        span:nth-child(2) {
+            top: 60px;
+            left: 30px;
+
+            @media (max-width: 768px) {
+                top: 40px;
+                left: 10px;
+            }
+        }
+
+        span:nth-child(3) {
+            top: 150px;
+            left: 80px;
+
+            @media (max-width: 768px) {
+                top: 100px;
+                left: 30px;
+            }
+        }
+
+        span:nth-child(4) {
+            top: -20px;
+            right: -20px;
+
+            @media (max-width: 768px) {
+                top: -10px;
+                right: -10px;
+            }
+        }
+
+        span:nth-child(5) {
+            top: 80px;
+            right: 40px;
+
+            @media (max-width: 768px) {
+                top: 50px;
+                right: 10px;
+            }
+        }
+
+        span:nth-child(6) {
+            top: 160px;
+            right: 90px;
+
+            @media (max-width: 768px) {
+                top: 110px;
+                right: 30px;
+            }
+        }
+    }
+
+    &_text {
+        position: relative;
+        z-index: 1;
+        color: #fff;
+        font-weight: 700;
+        font-size: clamp(1.3rem, 2.5vw, 1rem);
+        text-align: center;
+        text-transform: uppercase;
+        text-wrap: pretty;
+
+        @media (max-width: 768px) {
+            font-size: 1rem;
+        }
+    }
+
+    &_btn {
+        position: relative;
+        z-index: 1;
+        outline: none;
+        border: none;
+        padding: 14px 28px;
+        color: #4856db;
+        background-color: #fff;
+        border-radius: 19px;
+        font-size: 16px;
+        font-weight: 700;
+        cursor: pointer;
+        transition: background-color 0.3s;
+
+        &:hover {
+            background-color: #3a47c5;
+            color: #fff;
+        }
+
+        @media (max-width: 768px) {
+            padding: 12px 24px;
+            font-size: 14px;
+        }
+    }
+}
